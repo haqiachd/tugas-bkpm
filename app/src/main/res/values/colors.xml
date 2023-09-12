@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="butterfly_blue">#30A2FF</color>
+    <color name="jade_green">#00A86B</color>
+    <color name="orangered">#FF4500</color>
+    <color name="electric_purple">#bf00ff</color>
+    <color name="dogerblue">#1e90ff</color>
+    <color name="carolina_blue">#4B9CD3</color>
 </resources>
