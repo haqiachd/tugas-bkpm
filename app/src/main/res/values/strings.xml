@@ -5,4 +5,10 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="main_activity_text">Can you see me?</string>
+
+    <array name="spiner_ary">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+    </array>
 </resources>

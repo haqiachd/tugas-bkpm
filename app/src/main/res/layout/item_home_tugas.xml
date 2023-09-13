@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/iht_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:cardBackgroundColor="@color/dogerblue"
+        android:alpha="0.7"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        >
+
+        <TextView
+            android:id="@+id/iht_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tugas Acara 12"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
