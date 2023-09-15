@@ -16,9 +16,8 @@ import com.polije.sem3.R;
 import com.polije.sem3.adapter.ItemTugasAdapter;
 import com.polije.sem3.data.model.ItemTugasModel;
 import com.polije.sem3.min3.M3Tugas2;
-import com.polije.sem3.min4.Acara12;
-import com.polije.sem3.min4.LapanganTest;
-import com.polije.sem3.util.FragmentUtil;
+import com.polije.sem3.min4.M4ListView;
+import com.polije.sem3.min4.M4RecyclerView;
 
 import java.util.ArrayList;
 
@@ -101,7 +100,7 @@ public class HomeFragment extends Fragment {
                 new ItemTugasModel("Acara 14", new ItemTugasModel.Listener() {
                     @Override
                     public void onItemClicked() {
-                        startActivity(new Intent(HomeFragment.this.requireActivity(), Acara12.class));
+                        startActivity(new Intent(HomeFragment.this.requireActivity(), M4RecyclerView.class));
                     }
                 })
         );
