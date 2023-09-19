@@ -1,12 +1,12 @@
 package com.polije.sem3.data.model;
 
-public class ItemMahasiswa {
+public class MahasiswaModel {
 
     private String nama;
     private String npm;
     private String nohp;
 
-    public ItemMahasiswa(String nama, String npm, String nohp){
+    public MahasiswaModel(String nama, String npm, String nohp){
         setNama(nama);
         setNpm(npm);
         setNohp(nohp);

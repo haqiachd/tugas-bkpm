@@ -1,5 +1,7 @@
 package com.polije.sem3.adapter;
 
+
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,17 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.polije.sem3.R;
-import com.polije.sem3.data.model.ItemMahasiswa;
-import com.polije.sem3.data.model.ItemTugasModel;
+import com.polije.sem3.data.model.MahasiswaModel;
 
 import java.util.ArrayList;
 
-public class ItemMahasiswaAdapter extends RecyclerView.Adapter<ItemMahasiswaAdapter.ViewHolder>{
+public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.ViewHolder>{
 
-    private ArrayList<ItemMahasiswa> models;
+    private final ArrayList<MahasiswaModel> models;
+    private final Listener listener;
 
-    public ItemMahasiswaAdapter(ArrayList<ItemMahasiswa> models){
+    public MahasiswaAdapter(ArrayList<MahasiswaModel> models, Listener listener){
         this.models = models;
+        this.listener = listener;
     }
 
     @NonNull
@@ -31,10 +34,19 @@ public class ItemMahasiswaAdapter extends RecyclerView.Adapter<ItemMahasiswaAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.txtNama.setText(models.get(position).getNama());
         holder.txtNpm.setText(models.get(position).getNpm());
         holder.txtNoHp.setText(models.get(position).getNohp());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (holder.getAdapterPosition() != RecyclerView.NO_POSITION){
+                    listener.onItemClick(position);
+                }
+            }
+        });
     }
 
     @Override
@@ -46,12 +58,16 @@ public class ItemMahasiswaAdapter extends RecyclerView.Adapter<ItemMahasiswaAdap
 
         TextView txtNama, txtNpm, txtNoHp;
 
-        ViewHolder(View view){
+        public ViewHolder(View view){
             super(view);
             txtNama = view.findViewById(R.id.im_nama);
             txtNpm = view.findViewById(R.id.im_npm);
             txtNoHp = view.findViewById(R.id.im_nohp);
         }
 
+    }
+
+    public interface Listener{
+        void onItemClick(int position);
     }
 }
