@@ -25,21 +25,11 @@ public class M4RecyclerView extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.m4_recycler);
 
-        models.add(
-                new MahasiswaModel("Achmad Baihaqi", "5429843", "085690349034")
-        );
-        models.add(
-                new MahasiswaModel("Afrizal Wahyu Alkausar", "0895342", "085690238923")
-        );
-        models.add(
-                new MahasiswaModel("Syafrizal Wd Mahendra", "894234", "085790239023")
-        );
-        models.add(
-                new MahasiswaModel("Ninik Yuniarsih", "9028922", "088309238923")
-        );
-        models.add(
-                new MahasiswaModel("Widyasari Raisya Salsabila", "4238932", "081290239023")
-        );
+        models.add(new MahasiswaModel("Achmad Baihaqi", "5429843", "085690349034"));
+        models.add(new MahasiswaModel("Afrizal Wahyu Alkausar", "0895342", "085690238923"));
+        models.add(new MahasiswaModel("Syafrizal Wd Mahendra", "894234", "085790239023"));
+        models.add(new MahasiswaModel("Ninik Yuniarsih", "9028922", "088309238923"));
+        models.add(new MahasiswaModel("Widyasari Raisya Salsabila", "4238932", "081290239023"));
 
         mahasiswa = new MahasiswaAdapter(models, new MahasiswaAdapter.Listener() {
             @Override

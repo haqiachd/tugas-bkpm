@@ -18,6 +18,7 @@ import com.polije.sem3.data.model.ItemTugasModel;
 import com.polije.sem3.min3.M3Tugas2;
 import com.polije.sem3.min4.M4ListView;
 import com.polije.sem3.min4.M4RecyclerView;
+import com.polije.sem3.min5.Minggu15Activity;
 
 import java.util.ArrayList;
 
@@ -89,7 +90,7 @@ public class HomeFragment extends Fragment {
         initViews(view);
 
         tugasModels.add(
-                new ItemTugasModel("Acara 12", new ItemTugasModel.Listener() {
+                new ItemTugasModel("Minggu 3", new ItemTugasModel.Listener() {
                     @Override
                     public void onItemClicked() {
                         startActivity(new Intent(HomeFragment.this.requireActivity(), M3Tugas2.class));
@@ -97,10 +98,18 @@ public class HomeFragment extends Fragment {
                 })
         );
         tugasModels.add(
-                new ItemTugasModel("Acara 14", new ItemTugasModel.Listener() {
+                new ItemTugasModel("Minggu 4", new ItemTugasModel.Listener() {
                     @Override
                     public void onItemClicked() {
                         startActivity(new Intent(HomeFragment.this.requireActivity(), M4RecyclerView.class));
+                    }
+                })
+        );
+        tugasModels.add(
+                new ItemTugasModel("Minggu 5", new ItemTugasModel.Listener() {
+                    @Override
+                    public void onItemClicked() {
+                        startActivity(new Intent(HomeFragment.this.requireActivity(), Minggu15Activity.class));
                     }
                 })
         );

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".min5.FragmentFirst"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="this is first fragment"
+        android:textAlignment="center"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/fs_btn_frag1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginStart="@dimen/_20ssp"
+        android:layout_marginEnd="@dimen/_20ssp"
+        android:textStyle="bold"
+        android:text="First Fragment"
+        android:background="@color/teal_200"
+        />
+
+</RelativeLayout>
