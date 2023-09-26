@@ -17,24 +17,19 @@ import com.polije.sem3.adapter.ItemTugasAdapter;
 import com.polije.sem3.data.model.ItemTugasModel;
 import com.polije.sem3.min3.M3Tugas2;
 import com.polije.sem3.min4.M4ListView;
-import com.polije.sem3.min4.M4RecyclerView;
 import com.polije.sem3.min5.Minggu15Activity;
+import com.polije.sem3.min6.M6Intent1;
+import com.polije.sem3.min6.M6Intent2;
+import com.polije.sem3.min7.M7Storage;
+import com.polije.sem3.min7.M7StorageSecond;
 
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class HomeFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
     private ArrayList<ItemTugasModel> tugasModels = new ArrayList<>();
@@ -50,15 +45,6 @@ public class HomeFragment extends Fragment {
         listTugas = root.findViewById(R.id.home_list);
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -113,9 +99,26 @@ public class HomeFragment extends Fragment {
                     }
                 })
         );
+        tugasModels.add(
+                new ItemTugasModel("Minggu 6", new ItemTugasModel.Listener() {
+                    @Override
+                    public void onItemClicked() {
+                        startActivity(new Intent(HomeFragment.this.requireActivity(), M6Intent1.class));
+                    }
+                })
+        );
+        tugasModels.add(
+                new ItemTugasModel("Minggu 7", new ItemTugasModel.Listener() {
+                    @Override
+                    public void onItemClicked() {
+                        startActivity(new Intent(HomeFragment.this.requireActivity(), M7Storage.class));
+                    }
+                })
+        );
 
         itemTugasAdapter = new ItemTugasAdapter(requireContext(), R.layout.item_home_tugas, tugasModels);
         listTugas.setAdapter(itemTugasAdapter);
+        listTugas.setDivider(null);
 
     }
 }
