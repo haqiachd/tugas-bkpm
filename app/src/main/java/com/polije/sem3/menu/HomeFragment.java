@@ -101,7 +101,7 @@ public class HomeFragment extends Fragment {
                 new ItemTugasModel("Minggu 4", new ItemTugasModel.Listener() {
                     @Override
                     public void onItemClicked() {
-                        startActivity(new Intent(HomeFragment.this.requireActivity(), M4RecyclerView.class));
+                        startActivity(new Intent(HomeFragment.this.requireActivity(), M4ListView.class));
                     }
                 })
         );

@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_150sdp"
         android:fontFamily="@font/poppins_bold"
-        android:text="this is first fragment"
+        android:text="this is First Fragment"
         android:textAlignment="center"
         android:textSize="@dimen/_20ssp"
         android:textColor="@color/black"
