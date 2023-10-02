@@ -15,7 +15,7 @@ public class M6Intent2 extends AppCompatActivity {
 
     EditText name;
     Button btnSend;
-    private String KEY_NAME = "NAMA";
+    private final String KEY_NAME = "NAMA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

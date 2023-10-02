@@ -20,6 +20,7 @@ import com.polije.sem3.min4.M4ListView;
 import com.polije.sem3.min5.Minggu15Activity;
 import com.polije.sem3.min6.M6Intent1;
 import com.polije.sem3.min6.M6Intent2;
+import com.polije.sem3.min7.M7SqlMain;
 import com.polije.sem3.min7.M7Storage;
 import com.polije.sem3.min7.M7StorageSecond;
 
@@ -103,7 +104,7 @@ public class HomeFragment extends Fragment {
                 new ItemTugasModel("Minggu 6", new ItemTugasModel.Listener() {
                     @Override
                     public void onItemClicked() {
-                        startActivity(new Intent(HomeFragment.this.requireActivity(), M6Intent1.class));
+                        startActivity(new Intent(HomeFragment.this.requireActivity(), M6Intent2.class));
                     }
                 })
         );
@@ -111,7 +112,7 @@ public class HomeFragment extends Fragment {
                 new ItemTugasModel("Minggu 7", new ItemTugasModel.Listener() {
                     @Override
                     public void onItemClicked() {
-                        startActivity(new Intent(HomeFragment.this.requireActivity(), M7Storage.class));
+                        startActivity(new Intent(HomeFragment.this.requireActivity(), M7SqlMain.class));
                     }
                 })
         );
